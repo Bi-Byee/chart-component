@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,700;1,400&family=Inter:wght@400;700;800&display=swap");
+
+* {
+  padding: 0%;
+  margin: 0px;
+  background-color: hsl(27, 66%, 92%);
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+.app {
+  box-sizing: border-box;
+  display: block;
+  flex-direction: column;
+  padding: 10%;
+}
+
+.balance {
+  display: grid;
+  background-color: hsl(10, 79%, 65%);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 5%;
+  border-radius: 15px;
+}
+
+.balance span:nth-child(1) {
+  grid-area: 1/1/2/1;
+  background-color: transparent;
+  align-self: center;
+  color: white;
+  font-size: small;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.balance span:nth-child(2) {
+  grid-area: 2/1/2/2;
+  background-color: transparent;
+  align-self: center;
+  color: white;
+  font-size: larger;
+}
+.balance img {
+  grid-area: 1/2/3/2;
+  background-color: transparent;
+  justify-self: flex-end;
+}
+
+section {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  margin-top: 10%;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  column-gap: 3%;
+  padding: 2%;
+}
+
+#sp {
+  background-color: transparent;
+  grid-area: 1/1/1/8;
+  font-size: large;
+  padding-bottom: 4%;
+  margin: 5%;
+  text-align: center;
+}
+
+.bar {
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 7%;
+  transition: width 0.3s ease-in-out;
+  height: 0%;
+  align-self: end;
+  grid-area: var(--grid-area);
+}
+.bar:hover {
+  background-color: hsl(186, 34%, 60%);
+}
+
+#m::before,
+#t::before,
+#w::before,
+#t2::before,
+#f::before,
+#s::before,
+#s2::before {
+  display: var(--dis);
+  position: relative;
+  z-index: 1;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  padding: 2%;
+  font-size: xx-small;
+  font-family: inherit;
+  text-align: center;
+  top: -15px;
+}
+
+#m::before {
+  content: "$17.45";
+}
+
+#t::before {
+  content: "$34.91";
+}
+
+#w::before {
+  content: "$52.36";
+}
+
+#t2::before {
+  content: "$31.07";
+}
+
+#f::before {
+  content: "$23.39";
+}
+
+#s::before {
+  content: "$43.28";
+}
+
+#s2::before {
+  content: "$25.48";
+}
+
+.day {
+  background-color: white;
+  text-align: center;
+  font-size: small;
+  color: hsl(28, 10%, 53%);
+  box-sizing: border-box;
+  align-self: center;
+}
+
+hr {
+  grid-area: 4/1/5/8;
+  background-color: transparent;
+  width: 90%;
+  height: 0%;
+  justify-self: center;
+  margin: 4%;
+}
+
+.total {
+  grid-area: 5/1/5/4;
+  background-color: transparent;
+  padding: 5%;
+  padding-bottom: 15%;
+}
+
+.total span:first-child {
+  background-color: transparent;
+  font-size: small;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.total span:last-child {
+  background-color: transparent;
+  font-size: x-large;
+}
+
+.ba {
+  grid-area: 5/4/5/8;
+  background-color: transparent;
+  text-align: end;
+  padding-right: 10%;
+  padding-top: 10%;
+  padding-bottom: 15%;
+}
+
+.ba span:first-child {
+  background-color: transparent;
+  font-size: large;
+}
+
+.ba span:last-child {
+  background-color: transparent;
+  font-size: small;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  #m::before,
+  #t::before,
+  #w::before,
+  #t2::before,
+  #f::before,
+  #s::before,
+  #s2::before {
+    padding: 8%;
+    top: -20px;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  #m::before,
+  #t::before,
+  #w::before,
+  #t2::before,
+  #f::before,
+  #s::before,
+  #s2::before {
+    padding: 8%;
+    top: -20px;
+  }
+  .app {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  #m::before,
+  #t::before,
+  #w::before,
+  #t2::before,
+  #f::before,
+  #s::before,
+  #s2::before {
+    padding: 9%;
+    font-size: x-small;
+    top: -25px;
+  }
+
+  .app {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1440px) {
+  #m::before,
+  #t::before,
+  #w::before,
+  #t2::before,
+  #f::before,
+  #s::before,
+  #s2::before {
+    padding: 9%;
+    font-size: x-small;
+    top: -25px;
+  }
+
+  .app {
+    padding-left: 35%;
+    padding-right: 35%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #m::before,
+  #t::before,
+  #w::before,
+  #t2::before,
+  #f::before,
+  #s::before,
+  #s2::before {
+    padding: 7%;
+    font-size: small;
+    top: -28px;
+  }
+  .app {
+    padding-left: 35%;
+    padding-right: 35%;
+  }
+}
